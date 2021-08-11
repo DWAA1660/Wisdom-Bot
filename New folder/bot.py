@@ -17,5 +17,5 @@ async def on_message(message):
   if message.content.startswith('$wisdom'):
     with open('./resources/file.txt', 'r', encoding="utf8") as file:
       await message.channel.send(random.choice(file.readlines()))
-client.run('ODc0NzAyMDI4MDIxMDU1NDk4.YRKzvg.n8XHV8zmNelRA_UC2VxtoODLn2k')
+client.run('tokenhere')
 
