@@ -1,6 +1,7 @@
 import discord
 import os
-import random
+import secrets
+
 client = discord.Client()
 
 @client.event
@@ -16,6 +17,6 @@ async def on_message(message):
 
   if message.content.startswith('$wisdom'):
     with open('./resources/file.txt', 'r', encoding="utf8") as file:
-      await message.channel.send(random.choice(file.readlines()))
+      await message.channel.send(secrets.SystemRandom().choice(file.readlines()))
 client.run('tokenhere')
 
